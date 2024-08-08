@@ -8,7 +8,7 @@ export const AppRouter: React.FC = () => {
       element: <HomePage />,
     },
     {
-      path: '/*',
+      path: '*',
       element: <Navigate to="/home" />
     },
   ]);
