@@ -19,6 +19,7 @@ export const HomePage: React.FC = () => {
   const [energySocket, setEnergySocket] = useState<WebSocket | null>(null);
 
   const handleFruitClick = (e: React.TouchEvent<HTMLImageElement>) => {
+    e.preventDefault() 
     coinsSocket?.send(JSON.stringify({ coins: `${balance + pointsToAdd}` }));
     energySocket?.send(JSON.stringify({ energy: `${currentEnergy - pointsToAdd}` }));
     const card = e.currentTarget;
