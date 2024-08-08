@@ -4,7 +4,7 @@ import { HomePage } from "../../pages/home-page";
 export const AppRouter: React.FC = () => {
   const router = createBrowserRouter([
     {
-      path: '/home',
+      path: '/',
       element: <HomePage />,
     }
   ]);

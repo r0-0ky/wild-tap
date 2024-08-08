@@ -6,7 +6,6 @@ export const RootProvider: React.FC = () => {
   return (
     <>
       <SDKProvider acceptCustomStyles>
-
         <AppRouter />
       </SDKProvider>
     </>
