@@ -23,9 +23,6 @@ export const HomePage: React.FC = () => {
     coinsSocket?.send(JSON.stringify({ coins: `${balance + pointsToAdd}` }));
     energySocket?.send(JSON.stringify({ energy: `${currentEnergy - pointsToAdd}` }));
     const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.touches[0].clientX - rect.left - rect.width / 2;
-    const y = e.touches[0].clientY - rect.top - rect.height / 2;
     card.style.transform = `scale(0.98)`;
     setTimeout(() => {
       card.style.transform = '';
