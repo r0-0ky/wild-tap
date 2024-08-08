@@ -29,10 +29,12 @@ export const HomePage: React.FC = () => {
     setTimeout(() => {
       card.style.transform = '';
     }, 100);
-    setCurrentEnergy(prev => prev - pointsToAdd);
-    setBalance(prev => prev + pointsToAdd);
-    setClicks(prev => [...prev, { id: Date.now(), x: e.touches[0].pageX, y: e.touches[0].pageY }]);
-    console.log(e.touches);
+
+    Array.from(e.touches).forEach(item => {
+      setClicks(prev => [...prev, { id: Date.now(), x: item.pageX, y: item.pageY }]);
+      setCurrentEnergy(prev => prev - pointsToAdd);
+      setBalance(prev => prev + pointsToAdd);
+    })
   };
 
   const handleAnimationEnd = (id: number) => {
