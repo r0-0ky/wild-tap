@@ -6,11 +6,7 @@ export const AppRouter: React.FC = () => {
     {
       path: '/home',
       element: <HomePage />,
-    },
-    {
-      path: '*',
-      element: <Navigate to="/home" />
-    },
+    }
   ]);
 
   return (
