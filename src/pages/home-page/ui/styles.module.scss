@@ -2,7 +2,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  justify-content: space-between;
 }
 
 .balance-card-wrapper {
@@ -13,7 +13,6 @@
 }
 
 .fruit-button-wrapper {
-  flex: 1 0 auto;
   display: flex;
   justify-content: center;
 }
