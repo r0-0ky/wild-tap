@@ -1,0 +1,26 @@
+.click {
+  position: absolute;
+  font-family: 'Japanese', sans-serif;
+  color: white;
+  font-size: 36px;
+  animation: float 1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}

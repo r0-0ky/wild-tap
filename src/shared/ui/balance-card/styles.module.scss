@@ -1,0 +1,25 @@
+.card {
+  text-align: center;
+  font-size: 48px;
+  line-height: 55.22px;
+  font-family: 'Japanese';
+  font-weight: 400;
+  color: white;
+  background: #66496D url('../../images/for-balance-card/background.svg') right no-repeat;
+  border: 1px solid #FFFFFF80;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card::before {
+  content: '';
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin-top: -4px;
+  background: url('../../images/for-balance-card/coin.png') center / 200% 200% no-repeat;
+}

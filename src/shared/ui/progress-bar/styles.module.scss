@@ -1,0 +1,55 @@
+@property --a{
+  syntax: '<percentage>'; /* its type */
+  inherits: false;
+  initial-value: 0%; /* the initial value */
+}
+
+.progress-bar-container {
+  height: 60px;
+  background: #19031F url('../../images/for-progress-bar/berries.png') right / contain no-repeat;
+  border-radius: 15px;
+  position: relative;
+  margin: 8px 2px;
+  padding: 2px;
+}
+
+.progress-bar-loader {
+  display: block;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  background-color: transparent;
+  background-image: conic-gradient(from 90deg, transparent, transparent var(--a), #CB10AC var(--a));
+  z-index: -100;
+  border-radius: 15px;
+  transition: --a 0.5s;
+}
+
+.progress-bar-pink-text {
+  color: #CB10AC;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.progress-bar-text {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.progress-bar-bold-text {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 12px;
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

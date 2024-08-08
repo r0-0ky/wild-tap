@@ -1,0 +1,1 @@
+export { FruitClicker } from "./FruitClicker";

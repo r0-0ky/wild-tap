@@ -1,0 +1,8 @@
+@import './config/fonts.css';
+
+html body {
+  margin: 0;
+  padding: 0;
+  background: #22001B url(../assets/images/background.svg) center / cover no-repeat;
+  font-family: 'Qanelas', sans-serif;
+}
