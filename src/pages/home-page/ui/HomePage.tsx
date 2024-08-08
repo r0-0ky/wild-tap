@@ -31,9 +31,8 @@ export const HomePage: React.FC = () => {
     }, 100);
     setCurrentEnergy(prev => prev - pointsToAdd);
     setBalance(prev => prev + pointsToAdd);
-    Array.from(e.touches).forEach(item => {
-      setClicks(prev => [...prev, { id: Date.now(), x: item.pageX, y: item.pageY }]);
-    })
+    setClicks(prev => [...prev, { id: Date.now(), x: e.touches[0].pageX, y: e.touches[0].pageY }]);
+    console.log(e.touches);
   };
 
   const handleAnimationEnd = (id: number) => {
