@@ -18,20 +18,22 @@ export const HomePage: React.FC = () => {
   const [coinsSocket, setCoinsSocket] = useState<WebSocket | null>(null);
   const [energySocket, setEnergySocket] = useState<WebSocket | null>(null);
 
-  const handleFruitClick = (e: React.MouseEvent<HTMLImageElement>) => {
+  const handleFruitClick = (e: React.TouchEvent<HTMLImageElement>) => {
     coinsSocket?.send(JSON.stringify({ coins: `${balance + pointsToAdd}` }));
     energySocket?.send(JSON.stringify({ energy: `${currentEnergy - pointsToAdd}` }));
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
+    const x = e.touches[0].clientX - rect.left - rect.width / 2;
+    const y = e.touches[0].clientY - rect.top - rect.height / 2;
     card.style.transform = `perspective(2000px) rotateX(${-y / 12}deg) rotateY(${x / 12}deg)`;
     setTimeout(() => {
       card.style.transform = '';
     }, 100);
     setCurrentEnergy(prev => prev - pointsToAdd);
     setBalance(prev => prev + pointsToAdd);
-    setClicks([...clicks, { id: Date.now(), x: e.pageX, y: e.pageY }]);
+    Array.from(e.touches).forEach(item => {
+      setClicks(prev => [...prev, { id: Date.now(), x: item.pageX, y: item.pageY }]);
+    })
   };
 
   const handleAnimationEnd = (id: number) => {

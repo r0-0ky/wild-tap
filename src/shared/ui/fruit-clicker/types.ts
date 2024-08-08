@@ -1,3 +1,3 @@
 export interface FruitClickerProps {
-  handleClick: (e: React.MouseEvent<HTMLImageElement>) => void
+  handleClick: (e: React.TouchEvent<HTMLImageElement>) => void
 }

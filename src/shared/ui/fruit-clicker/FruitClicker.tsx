@@ -5,6 +5,6 @@ import Fruit from '../../images/for-fruit-clicker/fruit.png'
 
 export const FruitClicker: React.FC<FruitClickerProps> = ({ handleClick }) => {
   return (
-    <img onClick={handleClick} className={cn(classes['fruit-button'])} src={Fruit} alt="fruit" />
+    <img onTouchStart={handleClick} className={cn(classes['fruit-button'])} src={Fruit} alt="fruit" />
   )
 }
