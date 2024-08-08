@@ -26,7 +26,7 @@ export const HomePage: React.FC = () => {
     const rect = card.getBoundingClientRect();
     const x = e.touches[0].clientX - rect.left - rect.width / 2;
     const y = e.touches[0].clientY - rect.top - rect.height / 2;
-    card.style.transform = `perspective(2000px) rotateX(${-y / 12}deg) rotateY(${x / 12}deg)`;
+    card.style.transform = `scale(0.98)`;
     setTimeout(() => {
       card.style.transform = '';
     }, 100);
